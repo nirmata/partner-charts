@@ -29536,6 +29536,72 @@ entries:
     urls:
     - assets/kuma/kuma-2.2.2.tgz
     version: 2.2.2
+  kyverno:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Add a key to preserve configmap settings during upgrade
+        - kind: added
+          description: Make admission reports breaker threshold configurable
+        - kind: added
+          description: ImagePullSecrets made globally configurable
+        - kind: removed
+          description: Deprecated configuration `features.reports.chunkSize` was removed
+        - kind: added
+          description: ImagePullSecrets made configurable for tests
+      artifacthub.io/links: |
+        - name: Documentation
+          url: https://kyverno.io/docs
+      artifacthub.io/operator: "false"
+      artifacthub.io/prerelease: "false"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: N4K – Kubernetes Native Policy Management
+      catalog.cattle.io/kube-version: '>=1.22.0-0'
+      catalog.cattle.io/release-name: n4k
+    apiVersion: v2
+    appVersion: v1.13.6-n4k.nirmata.1
+    created: "2025-06-10T12:29:07.093519-05:00"
+    dependencies:
+    - condition: reports-server.enabled
+      name: reports-server
+      repository: https://nirmata.github.io/reports-server
+      version: 0.1.26
+    - condition: grafana.enabled
+      name: grafana
+      repository: ""
+      version: 3.3.6
+    - condition: crds.install
+      name: crds
+      repository: ""
+      version: 3.3.6
+    description: Kubernetes Native Policy Management
+    digest: 3093f14b776cc3f132bd7db453b4f3f5d0c6e1717fecb1d85629ea9459c67efd
+    home: https://kyverno.io/
+    icon: file://assets/icons/kyverno.png
+    keywords:
+    - kubernetes
+    - nirmata
+    - policy agent
+    - policy
+    - validating webhook
+    - admission controller
+    - mutation
+    - mutate
+    - validate
+    - generate
+    - supply chain
+    - security
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: Nirmata
+      url: https://kyverno.io/
+    name: kyverno
+    sources:
+    - https://github.com/nirmata/enterprise-kyverno
+    type: application
+    urls:
+    - assets/nirmata/kyverno-3.3.20.tgz
+    version: 3.3.20
   linkerd-control-plane:
   - annotations:
       catalog.cattle.io/auto-install: linkerd-crds
@@ -36396,6 +36462,72 @@ entries:
     urls:
     - assets/codership/mysql-galera-0.3.0.tgz
     version: 0.3.0
+  n4k:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Add a key to preserve configmap settings during upgrade
+        - kind: added
+          description: Make admission reports breaker threshold configurable
+        - kind: added
+          description: ImagePullSecrets made globally configurable
+        - kind: removed
+          description: Deprecated configuration `features.reports.chunkSize` was removed
+        - kind: added
+          description: ImagePullSecrets made configurable for tests
+      artifacthub.io/links: |
+        - name: Documentation
+          url: https://kyverno.io/docs
+      artifacthub.io/operator: "false"
+      artifacthub.io/prerelease: "false"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: N4K
+      catalog.cattle.io/kube-version: '>=1.22.0-0'
+      catalog.cattle.io/release-name: n4k
+    apiVersion: v2
+    appVersion: v1.13.6-n4k.nirmata.1
+    created: "2025-06-10T12:29:07.104535-05:00"
+    dependencies:
+    - condition: reports-server.enabled
+      name: reports-server
+      repository: https://nirmata.github.io/reports-server
+      version: 0.1.26
+    - condition: grafana.enabled
+      name: grafana
+      repository: ""
+      version: 3.3.6
+    - condition: crds.install
+      name: crds
+      repository: ""
+      version: 3.3.6
+    description: Kubernetes Native Policy Management
+    digest: f6a738fbd1029c43314ff6b2351db26b63798e19e757bb99fe143a5964bb6e79
+    home: https://kyverno.io/
+    icon: file://assets/icons/n4k.png
+    keywords:
+    - kubernetes
+    - nirmata
+    - policy agent
+    - policy
+    - validating webhook
+    - admission controller
+    - mutation
+    - mutate
+    - validate
+    - generate
+    - supply chain
+    - security
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: Nirmata
+      url: https://kyverno.io/
+    name: n4k
+    sources:
+    - https://github.com/nirmata/enterprise-kyverno
+    type: application
+    urls:
+    - assets/nirmata/n4k-3.3.20.tgz
+    version: 3.3.20
   nats:
   - annotations:
       catalog.cattle.io/certified: partner
