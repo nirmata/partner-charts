@@ -1,5 +1,3 @@
-# N4K – Kubernetes Native Policy Management
-
 N4K is an enterprise distribution of Kyverno by Nirmata, a Kubernetes-native policy engine that enables users to validate, mutate, and generate configurations using familiar YAML syntax.
 
 This chart includes:
